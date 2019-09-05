@@ -42,6 +42,16 @@ ubuntu@ip-172-31-90-13:~$ cut -d"," -f17 2007.csv|grep "SMF"|wc -l
 ## There are 58,074 flights originating from SMF
 ubuntu@ip-172-31-90-13:~$
 
+## Which flight was delayed the most in the year 2007? 
+##Let us see the flight details like the date, month, year , flightdelay , Origin and Destination
+
+
+ubuntu@ip-172-31-90-13:~$ cut -d"," -f1,2,3,10,15,17,18 2007.csv|sort -t"," -k5,5g|tail -n1
+2007,10,3,891,2598,PBI,DTW
+## The longest delay happened on 3rd of October 2007 for the flight number 891 which was delayed by 2598 minutes which flew from Palm Beach International
+airport to Detroit Metropolitan Wayne County Airport
+ubuntu@ip-172-31-90-13:~$
+
 
 
 
